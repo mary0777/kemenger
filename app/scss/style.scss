@@ -5,5 +5,221 @@
 @import 'global';
 
 
+.menu {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
 
-@import 'media';
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__link {
+    text-decoration: underline 3px transparent;
+    transition: text-decoration 0.4s linear, box-shadow 0.4s linear;
+    border-radius: 5px;
+    outline: transparent;
+
+    &:hover {
+      text-decoration: underline 3px $c-yellow;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $c-yellow;
+    }
+  }
+
+  &__phone {
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    padding: 10px 0 10px 48px;
+    text-decoration: underline 1px transparent;
+    border-radius: 5px;
+    outline: transparent;
+    transition: text-decoration 0.3s linear, box-shadow 0.3s linear;
+
+    &:hover {
+      text-decoration: underline 1px $c-yellow;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $c-yellow;
+    }
+
+    &::after {
+      @include pseudo;
+      width: 40px;
+      height: 40px;
+      background: $c-blue;
+      border-radius: 50%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background-color 0.3s linear;
+    }
+
+    &:hover::after {
+      background-color: #4ab9c9;
+    }
+
+    &::before {
+      @include pseudo;
+      width: 16px;
+      height: 16px;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      background-color: #fff;
+      mask-image: url('../images/sprite.svg#phone');
+      transition: background-color 0.3s linear;
+    }
+
+    &:hover::before {
+      background-color: $c-default;
+    }
+  }
+}
+
+.logo {
+  margin-right: 100px;
+  transition: box-shadow 0.4s linear, opacity 0.4s linear;
+  border-radius: 5px;
+  outline: transparent;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $c-yellow;
+  }
+}
+
+.hero {
+  &__inner {
+    min-height: 660px;
+    align-items: center;
+    display: flex;
+  }
+
+  &__title {
+    max-width: 665px;
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 44px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: 'KEMENGER MEKTEBI';
+      top: -20px;
+      left: -35px;
+      color: rgba(1, 143, 163, 0.06);
+    }
+  }
+
+  &__title-name {
+    color: $c-blue;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 530px;
+    margin-bottom: 44px;
+  }
+
+  &__form {
+    max-width: 400px;
+    max-height: 530px;
+    background-color: $bg-green;
+    border-radius: 30px;
+    padding: 30px 32px 32px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__form-title {
+    font-weight: 500;
+    font-size: 24px;
+    max-width: 205px;
+    margin: 0 auto 32px;
+  }
+
+  &__form-fieldset {
+    border: 0;
+    padding: 0;
+  }
+
+  &__form-color {
+    color: $c-blue;
+  }
+
+  &__form-item {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__form-input,
+  &__form-textarea {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid transparent;
+    outline: transparent;
+    
+    &::placeholder {
+      font-weight: 300;
+      font-size: 18px;
+      color: #c2c2c2;
+      transition: color 0.3s ease;
+    }
+
+    &:hover{
+      &::placeholder{
+        color: $bg-dark-blue;
+      }
+    }
+
+    &:focus{
+      box-shadow: 0 0 0 2px $c-yellow; 
+    }
+  }
+
+  &__form-textarea {
+    resize: none;
+  }
+
+  &__form-btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__bg {
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    height: calc(100vh - 108px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}

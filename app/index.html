@@ -1,15 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>KEMENGER MEKTEBI</title>
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="images/favicons/site.webmanifest">
+  <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="container">
+        <nav class="menu">
+          <a class="logo" href="#">
+            <img src="images/logo.png" alt="Логотип" width="102" height="88">
+          </a>
+
+          <div class="menu__list">
+            <div class="menu__item">
+              <a class="menu__link" href="#">
+                О нас
+              </a>
+            </div>
+            <div class="menu__item">
+              <a class="menu__link" href="#">
+                Каталог
+              </a>
+            </div>
+            <div class="menu__item">
+              <a class="menu__link" href="#">
+                Сертификаты
+              </a>
+            </div>
+            <div class="menu__item">
+              <a class="menu__link" href="#">
+                Отзывы
+              </a>
+            </div>
+            <div class="menu__item">
+              <a class="menu__link" href="#">
+                Контакты
+              </a>
+            </div>
+          </div>
+
+          <a class="menu__phone" href="tel:+ (380) 145-98-26">
+            + (380) 145-98-26
+          </a>
+
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+
+            <div class="hero__content">
+              <h1 class="hero__title">
+                <span class="hero__title-name">
+                  KEMENGER MEKTEBI
+                </span>
+                - центр интеллектуального развития
+              </h1>
+              <div class="hero__text">
+                <p>
+                  Обучение происходит на казахском и русском языках. При записи на два или более курсов предусмотрена
+                  скидка. Запишитесь на бесплатный пробный урок.
+                </p>
+              </div>
+              <a class="btn hero__popup" href="#hero-popup">
+                Оставить заявку
+              </a>
+              <form id="hero-popup" class="mfp-hide hero__form">
+                <h2 class="hero__form-title">Заполните <span class="hero__form-color">форму</span> и мы обязательно
+                  свяжемся с Вами.</h2>
+                <fieldset class="hero__form-fieldset">
+
+                  <ul class="hero__form-list">
+                    <li class="hero__form-item">
+                      <label for="name"></label>
+                      <input class="hero__form-input" id="name" name="name" type="text" placeholder="Ваше имя..."
+                        required="">
+                    </li>
+                    <li class="hero__form-item">
+                      <label for="tel"></label>
+                      <input class="hero__form-input" id="tel" name="tel" type="tel" placeholder="Ваш телефон..."
+                        required="">
+                    </li>
+                    <li class="hero__form-item">
+                      <label for="textarea"></label>
+                      <textarea class="hero__form-textarea" id="textarea" placeholder="Комментарий..."></textarea>
+                    </li>
+                  </ul>
+
+                  <button class="btn hero__form-btn" type="submit" href="1">
+                    Оставить заявку
+                  </button>
+
+                </fieldset>
+              </form>
+            </div>
+
+            <div class="hero__bg" style="background-image: url(images/hero/bg-hero.jpg);">
+
+            </div>
+
+            <div id="1" class="hero__thankful mfp-hide">
+              <p>hdfgjsssssssssssssssdfgkf</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
 
 
 

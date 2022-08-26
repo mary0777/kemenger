@@ -1,13 +1,12 @@
-// body{
-//   font-family: 'Open Sans', 'Roboto', sans-serif;
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 14px;
-//   line-height: 1.4;
-//   letter-spacing: 0.03em;
-//   background-color: #fff;
-//   color: $c-default;
-// }
+body{
+  font-family: 'Commissioner', 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  background-color: #fff;
+  color: $c-default;
+}
 
 // .wrapper {
 //   overflow-x: hidden;
@@ -33,8 +32,28 @@
 //   overflow: hidden;
 // }
 
-// .container{
-//   max-width: 1230px;
-//   padding: 0 15px;
-//   margin: 0 auto;
-// }
+.container{
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 19px 45px 21px;
+  background-color: $c-yellow;
+  box-shadow: 0 20px 40px -27px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  outline: transparent;
+  transition: background-color 0.3s ease;
+
+  &:hover{
+    background-color: $c-orange;
+  }
+
+  &:focus{
+    box-shadow: 0 0 0 2px #ff6838;
+  }
+}
