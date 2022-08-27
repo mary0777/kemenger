@@ -8,16 +8,17 @@ body{
   color: $c-default;
 }
 
-// .wrapper {
-//   overflow-x: hidden;
-//   min-height: 100%;
-//   display: flex;
-//   flex-direction: column;
-// }
+.wrapper {
+  overflow-x: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-// .main {
-//   flex: 1 1 auto; 
-// }
+.main {
+  flex: 1 1 auto; 
+  padding-top: 98px;
+}
 
 // .sr-only {
 //   position: absolute;
