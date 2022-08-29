@@ -25,7 +25,7 @@
       <div class="container">
         <nav class="menu">
           <a class="logo" href="#">
-            <img src="images/logo.png" alt="Логотип" width="102" height="88">
+            <img class="header__logo" src="images/logo.png" alt="Логотип" width="102" height="88">
           </a>
 
           <ul class="menu__list">
@@ -35,16 +35,16 @@
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link" href="#catalog">
                 Каталог
               </a>
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link" href="#certificates">
                 Сертификаты
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link" href="#reviews">
                 Отзывы
               </a>
             </li>
@@ -82,10 +82,10 @@
                   скидка. Запишитесь на бесплатный пробный урок.
                 </p>
               </div>
-              <a class="btn hero__popup" href="#hero-popup">
+              <a class="btn popup hero__popup" href="#popup">
                 Оставить заявку
               </a>
-              <form id="hero-popup" class="mfp-hide hero__form">
+              <form id="popup" class="mfp-hide hero__form">
                 <h2 class="hero__form-title">Заполните
                   <span class="hero__form-color">форму</span>
                   и мы обязательно свяжемся с Вами.
@@ -126,6 +126,9 @@
 
       <section id="about" class="about">
         <div class="container">
+          <h2 class="sr-only">
+            О нас
+          </h2>
           <div class="about__inner">
             <div class="about__item">
               <div class="about__text">
@@ -162,30 +165,495 @@
 
             <ul class="about__list">
               <li class="about__circle">
-                Ментальная арифметика
+                <a class="about__link about__link--math" href="#catalog">
+                  Ментальная арифметика
+                </a>
               </li>
               <li class="about__circle">
-                Скорочтение
+                <a class="about__link about__link--read" href="#catalog">
+                  Скорочтение
+                </a>
               </li>
               <li class="about__circle">
-                Подготовка к школе
+                <a class="about__link about__link--school" href="#catalog">
+                  Подготовка к школе
+                </a>
               </li>
               <li class="about__circle">
-                Группа продленного дня
+                <a class="about__link about__link--group" href="#catalog">
+                  Группа продленного дня
+                </a>
               </li>
               <li class="about__circle">
-                Супер память
+                <a class="about__link about__link--memory" href="#catalog">
+                  Супер память
+                </a>
               </li>
               <li class="about__circle">
-                Английский язык
+                <a class="about__link about__link--english" href="#catalog">
+                  Английский язык
+                </a>
               </li>
               <li class="about__circle">
-                Каллиграфия
+                <a class="about__link about__link--write" href="#catalog">
+                  Каллиграфия
+                </a>
               </li>
             </ul>
 
           </div>
 
+        </div>
+      </section>
+
+      <section class="catalog" id="catalog">
+        <div class="container">
+          <h2 class="title catalog__title">
+            Каталог
+          </h2>
+          <div class="catalog__inner">
+            <div class="catalog__item">
+              <h3 class="catalog__name catalog__name--school">
+                Подготовка к школе
+              </h3>
+
+              <div class="catalog__info">
+                <div class="catalog__price">
+                  30 000
+                  <span>
+                    грн
+                  </span>
+                </div>
+                <ul class="catalog__list-age">
+                  <li class="catalog__descr-age">
+                    4-6 лет
+                  </li>
+                  <li class="catalog__descr-age">
+                    3 занятия в неделю по 3 ч.
+                  </li>
+                </ul>
+
+                <ul class="catalog__list">
+                  <li class="catalog__descr">
+                    Обучение чтению
+                  </li>
+                  <li class="catalog__descr">
+                    Письмо
+                  </li>
+                  <li class="catalog__descr">
+                    Математика
+                  </li>
+                  <li class="catalog__descr">
+                    Английский язык
+                  </li>
+                  <li class="catalog__descr">
+                    Развитие речи
+                  </li>
+                  <li class="catalog__descr">
+                    Концентрация внимания
+                  </li>
+                  <li class="catalog__descr">
+                    Усвоение изучаемого материала
+                  </li>
+                  <li class="catalog__descr">
+                    Различные техники запоминания
+                  </li>
+                  <li class="catalog__descr">
+                    Развитие логико-математического мышления
+                  </li>
+                </ul>
+                <button class="catalog__btn" type="button" id="aa">
+                  Подробнее...
+                </button>
+
+                <a class="btn popup catalog__popup catalog__popup--school" href="#popup">
+                  Выбрать
+                </a>
+              </div>
+            </div>
+
+            <div class="catalog__item">
+              <h3 class="catalog__name catalog__name--read">
+                скорочтение
+              </h3>
+
+              <div class="catalog__info">
+                <div class="catalog__price">
+                  27 000
+                  <span>
+                    грн
+                  </span>
+                </div>
+                <ul class="catalog__list-age">
+                  <li class="catalog__descr-age">
+                    6-15 лет
+                  </li>
+                  <li class="catalog__descr-age">
+                    3 занятия в неделю по 1 ч.
+                  </li>
+                </ul>
+
+                <ul class="catalog__list">
+                  <li class="catalog__descr">
+                    Увеличение скорости чтения
+                  </li>
+                  <li class="catalog__descr">
+                    Артикуляция
+                  </li>
+                  <li class="catalog__descr">
+                    Развитие речи
+                  </li>
+                  <li class="catalog__descr">
+                    Развитие внимания
+                  </li>
+                  <li class="catalog__descr">
+                    Увеличение поля зрения
+                  </li>
+                  <li class="catalog__descr">
+                    Увеличение словарного запаса
+                  </li>
+                  <li class="catalog__descr">
+                    Понимание прочитанного
+                  </li>
+                  <li class="catalog__descr">
+                    Пересказ
+                  </li>
+                  <li class="catalog__descr">
+                    Различные техники понимания
+                  </li>
+                  <li class="catalog__descr">
+                    Пробный урок и диагностика БЕСПЛАТНО
+                  </li>
+                </ul>
+                <button class="catalog__btn" type="button">
+                  Подробнее...
+                </button>
+
+                <a class="btn popup catalog__popup catalog__popup--read" href="#popup">
+                  Выбрать
+                </a>
+              </div>
+            </div>
+
+            <div class="catalog__item">
+              <h3 class="catalog__name catalog__name--math">
+                ментальная арифметика
+              </h3>
+
+              <div class="catalog__info">
+                <div class="catalog__price">
+                  20 000
+                  <span>
+                    грн
+                  </span>
+                </div>
+                <ul class="catalog__list-age">
+                  <li class="catalog__descr-age">
+                    2 занятия в неделю по 1 ч.
+                  </li>
+                </ul>
+
+                <ul class="catalog__list">
+                  <li class="catalog__descr">
+                    Быстрый счет
+                  </li>
+                  <li class="catalog__descr">
+                    Развитие высокой концентрации
+                  </li>
+                  <li class="catalog__descr">
+                    Увеличесние поля зрения
+                  </li>
+                  <li class="catalog__descr">
+                    Фотографическая память
+                  </li>
+                  <li class="catalog__descr">
+                    Пробный урок БЕСПЛАТНО
+                  </li>
+                  <li class="catalog__descr">
+                    Обучающая платформа в ПОДАРОК
+                  </li>
+                </ul>
+                <button class="catalog__btn" type="button">
+                  Подробнее...
+                </button>
+
+                <a class="btn popup catalog__popup catalog__popup--math" href="#popup">
+                  Выбрать
+                </a>
+              </div>
+            </div>
+
+            <div class="catalog__item">
+              <h3 class="catalog__name catalog__name--write">
+                Каллиграфия
+              </h3>
+
+              <div class="catalog__info">
+                <div class="catalog__price">
+                  24 000
+                  <span>
+                    грн
+                  </span>
+                </div>
+                <ul class="catalog__list-age">
+                  <li class="catalog__descr-age">
+                    2 занятия в неделю по 1 ч.
+                  </li>
+                </ul>
+
+                <ul class="catalog__list">
+                  <li class="catalog__descr">
+                    Развитие памяти
+                  </li>
+                  <li class="catalog__descr">
+                    Восприятие пространства
+                  </li>
+                  <li class="catalog__descr">
+                    Прокачивание мелкой моторики
+                  </li>
+                  <li class="catalog__descr">
+                    Основы грамотного письма
+                  </li>
+                  <li class="catalog__descr">
+                    Развитие физической выносливости и усидчивости
+                  </li>
+                  <li class="catalog__descr">
+                    Умение писать диктанты без графических и орфографических ошибок
+                  </li>
+                </ul>
+                <button class="catalog__btn" type="button">
+                  Подробнее...
+                </button>
+
+                <a class="btn popup catalog__popup catalog__popup--write" href="#popup">
+                  Выбрать
+                </a>
+              </div>
+            </div>
+
+            <div class="catalog__item">
+              <h3 class="catalog__name catalog__name--english">
+                Английский язык
+              </h3>
+
+              <div class="catalog__info">
+                <div class="catalog__price">
+                  18 000
+                  <span>
+                    грн
+                  </span>
+                </div>
+                <ul class="catalog__list-age">
+                  <li class="catalog__descr-age">
+                    2 занятия в неделю по 1,5 ч.
+                  </li>
+                </ul>
+
+                <ul class="catalog__list">
+                  <li class="catalog__descr">
+                    Чтение по правилам
+                  </li>
+                  <li class="catalog__descr">
+                    Знание 500 новых слов
+                  </li>
+                  <li class="catalog__descr">
+                    Самостоятельное выполнение домашнего задания
+                  </li>
+                </ul>
+
+                <a class="btn popup catalog__popup catalog__popup--english" href="#popup">
+                  Выбрать
+                </a>
+              </div>
+            </div>
+
+            <div class="catalog__item">
+              <h3 class="catalog__name catalog__name--group">
+                Группа продленного дня
+              </h3>
+
+              <div class="catalog__info">
+                <div class="catalog__price">
+                  35 000
+                  <span>
+                    грн
+                  </span>
+                </div>
+                <ul class="catalog__list-age">
+                  <li class="catalog__descr-age">
+                    5 раз в неделю
+                  </li>
+                  <li class="catalog__descr-age">
+                    1 смена с 9:00 по 12:00
+                  </li>
+                  <li class="catalog__descr-age">
+                    2 смена с 14:00 по 17:00
+                  </li>
+                </ul>
+
+                <ul class="catalog__list">
+                  <li class="catalog__descr">
+                    Подготовка к СОР и СОЧ
+                  </li>
+                  <li class="catalog__descr">
+                    Проработка пробелов в знаниях
+                  </li>
+                  <li class="catalog__descr">
+                    Индивидуальный подход
+                  </li>
+                  <li class="catalog__descr">
+                    Выявление сильных сторон ребенка
+                  </li>
+                  <li class="catalog__descr">
+                    Профессиональная помощь в подготовке домашних заданий
+                  </li>
+                  <li class="catalog__descr">
+                    Дополнительные образовательные дисциплины
+                  </li>
+                </ul>
+                <button class="catalog__btn" type="button">
+                  Подробнее...
+                </button>
+
+                <a class="btn popup catalog__popup catalog__popup--group" href="#popup">
+                  Выбрать
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="certificates" id="certificates">
+        <div class="container">
+          <h2 class="title certificates__title">
+            Наши сертификаты
+          </h2>
+          <ul class="certificates__list">
+            <li class="certificates__item">
+              <img class="certificates__img" src="images/certificate/sert-1.jpg" alt="Сертификат" width="285"
+                height="202">
+            </li>
+            <li class="certificates__item">
+              <img class="certificates__img" src="images/certificate/sert-2.jpg" alt="Сертификат" width="285"
+                height="202">
+            </li>
+            <li class="certificates__item">
+              <img class="certificates__img" src="images/certificate/sert-3.jpg" alt="Сертификат" width="285"
+                height="202">
+            </li>
+            <li class="certificates__item">
+              <img class="certificates__img" src="images/certificate/sert-4.jpg" alt="Сертификат" width="285"
+                height="202">
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <h2 class="title reviews__title">
+            Отзывы
+          </h2>
+          <div class="reviews__inner">
+            <div class="reviews__item">
+              <div class="reviews__top">
+                <img class="reviews__img" src="images/reviews/review-1.jpg" alt="Фото Анары Баймаганбетовой" width="80"
+                  height="80">
+                <div class="reviews__name">
+                  Анара Баймаганбетова
+                </div>
+              </div>
+              <div class="reviews__text">
+                <p>
+                  Искренне рекомендую, детям дают отличные знания и безопасность. Профессионалы своего дела. Удачи вам и
+                  успехов желаю.
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__item">
+              <div class="reviews__top">
+                <img class="reviews__img" src="images/reviews/review-2.jpg" alt="Фото  Анара Баймаганбетова" width="80"
+                  height="80">
+                <div class="reviews__name">
+                  Анара Баймаганбетова
+                </div>
+              </div>
+              <div class="reviews__text">
+                <p>
+                  Искренне рекомендую, детям дают отличные знания и безопасность. Профессионалы своего дела. Удачи вам и
+                  успехов желаю.
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__item">
+              <div class="reviews__top">
+                <img class="reviews__img" src="images/reviews/review-3.jpg" alt="Фото Енлик Серик" width="80"
+                  height="80">
+                <div class="reviews__name">
+                  Енлик Серик
+                </div>
+              </div>
+              <div class="reviews__text">
+                <p>
+                  Комфорная обстановака, распологает к учебе, учителя доброжелательные,но требовательные! То, что надо!
+                  Советую 100%.
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__item">
+              <div class="reviews__top">
+                <img class="reviews__img" src="images/reviews/review-4.jpg" alt="Фото Енлик Серик" width="80"
+                  height="80">
+                <div class="reviews__name">
+                  Gulzhan Kossantayeva
+                </div>
+              </div>
+              <div class="reviews__text">
+                <p>
+                  Айжан Талгатовна өз ісінің маманы. Менің қызымның оқу үлгеріміне көп ықпал тигіздіңіз. Кемеңгер
+                  мектебі нағыз кеменгер бала тәлімін береді!
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__item">
+              <div class="reviews__top">
+                <img class="reviews__img" src="images/reviews/review-5.jpg" alt="Фото Malika Fazlieva " width="80"
+                  height="80">
+                <div class="reviews__name">
+                  Malika Fazlieva
+                </div>
+              </div>
+              <div class="reviews__text">
+                <p>
+                  Маған ұнаған жері білімді жақсы береді. Ұлымның қатынап жүргеніне 1 ай болмады бірақ нәтиже бар.
+                  Мұғалімдеріде өте сыпайы әрі білімді.
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__item">
+              <div class="reviews__top">
+                <img class="reviews__img" src="images/reviews/review-6.jpg" alt="Фото Malika Fazlieva " width="80"
+                  height="80">
+                <div class="reviews__name">
+                  Malika Fazlieva
+                </div>
+              </div>
+              <div class="reviews__text">
+                <p>
+                  Маған ұнаған жері білімді жақсы береді. Ұлымның қатынап жүргеніне 1 ай болмады бірақ нәтиже бар.
+                  Мұғалімдеріде өте сыпайы әрі білімді.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 $(function () {
 
-  $('.hero__popup').magnificPopup({
+  $('.popup').magnificPopup({
     type: 'inline',
     preloader: false,
     focus: '#name',
@@ -17,14 +17,77 @@ $(function () {
   });
 
 
-  $('.menu__link').on('click', function (event) {
+  $('.menu__link, .about__link').on('click', function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
-      top = $(id).offset().top - 150;
+      top = $(id).offset().top -100;
     $('body,html').animate({
       scrollTop: top
     }, 1500);
   });
+
+
+
+  // let data = Array.from(document.querySelectorAll('.catalog__descr')),
+  //   step = 4,
+  //   item = 0;
+
+  //   data.slice(step).forEach(e => e.style.display = 'none', $('.catalog__btn').display = 'none');
+
+  // document.querySelector('.catalog__btn').addEventListener('click', function (e) {
+  //   let tmp = data.slice(item);
+  //   tmp.forEach(e => e.style.display = 'block');
+  //   item += item;
+
+  //   if (tmp.length < 20)
+  //     this.remove();
+
+  // });
+
+  /*------------------------------------ */
+
+
+  $('.catalog__btn').on('click', function () {
+    $('.catalog__descr:nth-child(n+5)').slideToggle();
+    $('.catalog__info').toggleClass('catalog__info--active');
+  });
+
+
+  // $('.about__link').on('click', function (event) {
+  //   event.preventDefault();
+  //   $($(this).attr('href')).scrollTo($('.catalog__item'));
+  // });
+
+
+
+//   var buttons = document.getElementsByClassName(".catalog__btn");
+// var buttonsCount = buttons.length;
+// for (var i = 0; i <= buttonsCount; i += 1) {
+//     buttons[i].onclick = function(e) {
+//       $('.catalog__descr:nth-child(n+5)').(this.id).slideToggle();
+//     };
+// }
+
+
+
+
+
+
+
+  $('.catalog__inner, .reviews__inner').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    cssEase: 'linear',
+    prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-btn slick-next"></button>'
+  });
+
+
+
+
+
 
 
 

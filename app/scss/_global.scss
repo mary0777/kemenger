@@ -1,4 +1,4 @@
-body{
+body {
   font-family: 'Commissioner', 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -16,24 +16,24 @@ body{
 }
 
 .main {
-  flex: 1 1 auto; 
+  flex: 1 1 auto;
   padding-top: 98px;
 }
 
-// .sr-only {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   border: 0;
-//   padding: 0;
-//   white-space: nowrap;
-//   clip-path: inset(100%);
-//   clip: rect(0 0 0 0);
-//   overflow: hidden;
-// }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
-.container{
+.container {
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
@@ -50,11 +50,17 @@ body{
   outline: transparent;
   transition: background-color 0.3s ease;
 
-  &:hover{
+  &:hover {
     background-color: $c-orange;
   }
 
-  &:focus{
+  &:focus {
     box-shadow: 0 0 0 2px #ff6838;
   }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 48px;
+  text-align: center;
 }
