@@ -25,7 +25,7 @@
       <div class="container">
         <nav class="menu">
           <a class="logo" href="#">
-            <img class="header__logo" src="images/logo.png" alt="Логотип" width="102" height="88">
+            <img class="logo__img" src="images/logo.png" alt="Логотип" width="102" height="88">
           </a>
 
           <ul class="menu__list">
@@ -49,7 +49,7 @@
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link" href="#contacts">
                 Контакты
               </a>
             </li>
@@ -139,7 +139,7 @@
                 </p>
               </div>
               <div class="about__img">
-                <img src="images/about/about-1.jpg" alt="Фото педагогов" width="488" height="343">
+                <img class="about__image" src="images/about/about-1.jpg" alt="Фото педагогов" width="488" height="343">
               </div>
             </div>
 
@@ -153,7 +153,7 @@
                 </p>
               </div>
               <div class="about__img">
-                <img src="images/about/about-2.jpg" alt="Фото учеников" width="488" height="343">
+                <img class="about__image" src="images/about/about-2.jpg" alt="Фото учеников" width="488" height="343">
               </div>
             </div>
           </div>
@@ -657,7 +657,101 @@
         </div>
       </section>
 
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <div class="contacts__top" style="background-image: url(images/contacts/contacts-bg.png);">
+            <div class="contacts__info">
+              <h2 class="title contacts__title">
+                Наши контакты
+              </h2>
+              <address>
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    Запишитесь на бесплатный пробный урок
+                    по номеру:
+                    <a class="contacts__descr" href="tel:+ (380) 145-98-26">
+                      +(380) 145-98-26
+                    </a>
+                  </li>
+                  <li class="contacts__item">
+                    Адрес:
+                    <address class="contacts__descr">
+                      г. Харьков, ул. Сумская, 28, офис 14
+                    </address>
+                  </li>
+                  <li class="contacts__item">
+                    График работы:
+                    <span class="contacts__descr">
+                      Пн-Пт - 9:00-19:00;
+                    </span>
+                    <span class="contacts__descr">
+                      Сб - 9:00-17:00;
+                    </span>
+                    <span class="contacts__descr">
+                      Вс - выходной
+                    </span>
+                  </li>
+                  <li class="contacts__item">
+                    E-mail:
+                    <a class="contacts__descr" href="mailto:@kemenger.mektebi">
+                      @kemenger.mektebi
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </div>
+
+          <div class="contacts__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.722823135066!2d36.22929633455143!3d49.99780586192388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a0e5c748b43d%3A0xcf5ba02426663111!2z0YPQuy4g0KHRg9C80YHQutCw0Y8sIDI4LCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDYxMDAw!5e0!3m2!1sru!2snl!4v1661848049755!5m2!1sru!2snl"
+              width="794" height="539" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="menu">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.png" alt="Логотип" width="102" height="88">
+          </a>
+
+          <ul class="menu__list footer__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#about">
+                О нас
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#catalog">
+                Каталог
+              </a>
+            <li class="menu__item">
+              <a class="menu__link" href="#certificates">
+                Сертификаты
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#reviews">
+                Отзывы
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#contacts">
+                Контакты
+              </a>
+            </li>
+          </ul>
+
+          <img class="footer__img" src="images/footer-logo.jpg" alt="Логотип" width="187" height="51">
+
+        </nav>
+      </div>
+    </footer>
 
   </div>
 

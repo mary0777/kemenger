@@ -20,7 +20,7 @@ $(function () {
   $('.menu__link, .about__link').on('click', function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
-      top = $(id).offset().top -100;
+      top = $(id).offset().top - 100;
     $('body,html').animate({
       scrollTop: top
     }, 1500);
@@ -77,7 +77,7 @@ $(function () {
   $('.catalog__inner, .reviews__inner').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     cssEase: 'linear',
     prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
