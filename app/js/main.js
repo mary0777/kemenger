@@ -1,5 +1,7 @@
 $(function () {
 
+  
+
   $('.popup').magnificPopup({
     type: 'inline',
     preloader: false,
@@ -104,4 +106,26 @@ $(window).scroll(function () {
   } else {
     $('.header').removeClass('fixed');
   }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const burger = document.querySelector('.burger'); 
+  const mobileMenu = document.querySelector('.menu__list'); 
+  const bodyLock = document.querySelector('body');
+
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('menu__list--active'); 
+    if (mobileMenu.classList.contains('menu__list--active'))  { 
+      burger.classList.add('burger--active'); 
+      bodyLock.classList.add('lock');
+    }
+    else {
+      burger.classList.remove('burger--active');
+      mobileMenu.classList.remove('menu__list--active');
+      bodyLock.classList.remove('lock');
+    }
+  });
 });

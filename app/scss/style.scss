@@ -68,20 +68,51 @@
   display: flex;
   align-items: center;
 
+  @include r($r-md) {
+    padding: 5px 0;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     font-weight: 500;
     font-size: 16px;
+
+    @include r($r-lg) {
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      padding-top: 100px;
+      background-color: $bg-yellow;
+      border-bottom: 1px solid #000;
+      z-index: 3;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -200%);
+      transition: transform 0.4s linear;
+    }
+
+    @include r($r-md) {
+      padding-top: 70px;
+    }
+
+    &--active {
+      transform: translate(-50%, 0%);
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 40px;
+
+      @include r($r-lg) {
+        margin-right: 0;
+      }
     }
   }
 
   &__link {
+    display: block;
     text-decoration: underline 3px transparent;
     transition: text-decoration 0.4s linear, box-shadow 0.4s linear;
     border-radius: 5px;
@@ -94,9 +125,16 @@
     &:focus {
       box-shadow: 0 0 0 2px $c-yellow;
     }
+
+    @include r($r-lg) {
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+    }
   }
 
   &__phone {
+    z-index: 3;
     margin-left: auto;
     font-weight: 600;
     font-size: 18px;
@@ -106,6 +144,20 @@
     border-radius: 5px;
     outline: transparent;
     transition: text-decoration 0.3s linear, box-shadow 0.3s linear;
+
+    @include r($r-lg) {
+      margin-right: 40px;
+    }
+
+    @include r($r-md) {
+      font-size: 16px;
+    }
+
+    @include r($r-sm) {
+      margin-right: 20px;
+      padding-left: 33px;
+      font-size: 14px;
+    }
 
     &:hover {
       text-decoration: underline 1px $c-yellow;
@@ -125,6 +177,11 @@
       top: 50%;
       transform: translateY(-50%);
       transition: background-color 0.3s linear;
+
+      @include r($r-md) {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     &:hover::after {
@@ -142,6 +199,12 @@
       background-color: #fff;
       mask-image: url('../images/sprite.svg#phone');
       transition: background-color 0.3s linear;
+
+      @include r($r-md) {
+        width: 10px;
+        height: 10px;
+        left: 10px;
+      }
     }
 
     &:hover::before {
@@ -156,6 +219,7 @@
   border-radius: 5px;
   outline: transparent;
   overflow: hidden;
+  z-index: 4;
 
   &:hover {
     opacity: 0.7;
@@ -164,13 +228,83 @@
   &:focus {
     box-shadow: 0 0 0 2px $c-yellow;
   }
+
+  @include r($r-lg) {
+    margin-right: 0;
+  }
+
+  &__img {
+    @include r($r-md) {
+      width: 60px;
+      height: 55px;
+    }
+  }
+}
+
+.burger {
+  @include burger;
+  display: none;
+  z-index: 4;
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: $burgerLineHeight;
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: $burgerLineHeight;
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: calc(100% - $burgerLineHeight);
+  }
+
+  &--active {
+    .burger__line {
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      top: 50%;
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 50%;
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+  }
+
+  @include r($r-lg) {
+    display: block;
+  }
 }
 
 .hero {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 
   &__inner {
-    height: calc(100vh - 108px);
+    height: calc(100vh - 138px);
     align-items: center;
     display: flex;
   }
@@ -182,12 +316,27 @@
     margin-bottom: 44px;
     position: relative;
 
+    @include r($r-md) {
+      font-size: 43px;
+      margin-bottom: 35px;
+    }
+
+    @include r($r-sm) {
+      font-size: 25px;
+      margin-bottom: 28px;
+    }
+
     &::before {
       position: absolute;
       content: 'KEMENGER MEKTEBI';
       top: -20px;
       left: -35px;
       color: rgba(1, 143, 163, 0.06);
+
+      @include r($r-sm) {
+        top: -15px;
+        left: -14px;
+      }
     }
   }
 
@@ -199,6 +348,14 @@
   &__text {
     max-width: 530px;
     margin-bottom: 44px;
+
+    @include r($r-md) {
+      font-size: 18px;
+    }
+
+    @include r($r-sm) {
+      font-size: 16px;
+    }
   }
 
   &__form {
@@ -245,6 +402,10 @@
     border: 1px solid transparent;
     outline: transparent;
 
+    @include r($r-sm){
+      padding: 8px;
+    }
+
     &::placeholder {
       font-weight: 300;
       font-size: 18px;
@@ -270,6 +431,10 @@
   &__form-btn {
     display: block;
     margin: 0 auto;
+
+    @include r($r-sm){
+      padding: 20px 31px 21px;
+    }
   }
 
   &__bg {
@@ -282,6 +447,18 @@
     top: 0;
     right: 0;
     z-index: -1;
+
+    @include r($r-xxl) {
+      background-size: cover;
+    }
+
+    @include r($r-xl) {
+      opacity: 0.7;
+    }
+
+    @include r($r-sm) {
+      background-position: unset;
+    }
   }
 }
 
@@ -337,6 +514,11 @@
     &:not(:last-child) {
       margin-bottom: 115px;
     }
+
+    // @include r($r-xl) {
+    //  flex-direction: column;
+      
+    // }
   }
 
   &__text {
@@ -409,7 +591,7 @@
     }
   }
 
-  &__image{
+  &__image {
     border-radius: 30px;
   }
 
@@ -452,9 +634,9 @@
       font-weight: 500;
     }
 
-    &:focus{
+    &:focus {
       box-shadow: 0 0 0 2px $c-yellow;
-  }
+    }
 
     &::before {
       @include pseudo;
@@ -656,14 +838,12 @@
     }
   }
 
-  &__list{
- 
-  }
+  &__list {}
 
   &__descr {
     padding: 12px;
     border-bottom: 1px dashed #f0f0f0;
-    
+
 
     &:nth-child(n+5) {
       display: none;
@@ -976,13 +1156,13 @@
     text-decoration: underline transparent;
     transition: color 0.4s linear, text-decoration 0.4s linear;
 
-    &:hover{
+    &:hover {
       color: $c-yellow;
       text-decoration: underline $c-yellow;
     }
 
-    &:focus{
-        box-shadow: 0 0 0 2px $c-yellow;
+    &:focus {
+      box-shadow: 0 0 0 2px $c-yellow;
     }
   }
 
@@ -1026,11 +1206,9 @@
   }
 }
 
-
 .footer {
   background-color: $bg-dark-blue;
   padding: 36px 0 56px;
-  
 
   &__list {
     color: #fff;

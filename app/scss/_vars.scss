@@ -19,6 +19,30 @@
   position: $pos;
 }
 
+@mixin burger {
+	width: $burgerWidth; //указываем ширину линий
+	height: $burgerHeight; //указываем высоту линий
+	position: relative;
+	color: $burgerColor; //указываем цвет линий
+}
+
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+$burgerWidth: 30px;
+$burgerHeight: 20px; 
+$burgerLineHeight: 2px;
+$burgerColor: #363853;
+
+$r-sm: 576;
+$r-md: 768;
+$r-lg: 992;
+$r-xl: 1200;
+$r-xxl: 1330;
+
 // @include line-clamp(3);
 
 $c-default: #000;
