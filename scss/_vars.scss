@@ -1,16 +1,55 @@
-// @mixin line-clamp($lines: 1) {
-//   @if $lines <=1 {
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     white-space: nowrap;
-//   } @else {
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     display: -webkit-box;
-//     -webkit-line-clamp: $lines;
-//     -webkit-box-orient: vertical;
-//   }
-// }
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
-// @include line-clamp(3);
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
 
+@mixin pseudo($pos: absolute, $content: '') {
+  content: $content;
+  position: $pos;
+}
+
+@mixin burger {
+  width: $burgerWidth;
+  height: $burgerHeight;
+  position: relative;
+  color: $burgerColor;
+}
+
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+$burgerWidth: 30px;
+$burgerHeight: 20px;
+$burgerLineHeight: 2px;
+$burgerColor: #363853;
+
+$r-sm: 576;
+$r-md: 768;
+$r-lg: 992;
+$r-xl: 1200;
+$r-xxl: 1340;
+
+$c-default: #000;
+$c-blue: #018fa3;
+$c-purple: #955eea;
+$c-green: #4eca30;
+$c-yellow: #ffe41b;
+$c-pink: #ff4d94;
+$c-orange: #ffa724;
+$bg-dark-blue: #0a2530;
+$bg-green: #f6faff;
+$bg-yellow: #fff7be;
