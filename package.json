@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://mary0777.github.io/kemenger/",
   "scripts": {
     "deploy": "gh-pages -d app"
   },

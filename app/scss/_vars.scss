@@ -20,10 +20,10 @@
 }
 
 @mixin burger {
-	width: $burgerWidth; 
-	height: $burgerHeight; 
-	position: relative;
-	color: $burgerColor; 
+  width: $burgerWidth;
+  height: $burgerHeight;
+  position: relative;
+  color: $burgerColor;
 }
 
 @mixin r($width) {
@@ -33,7 +33,7 @@
 }
 
 $burgerWidth: 30px;
-$burgerHeight: 20px; 
+$burgerHeight: 20px;
 $burgerLineHeight: 2px;
 $burgerColor: #363853;
 
@@ -42,8 +42,6 @@ $r-md: 768;
 $r-lg: 992;
 $r-xl: 1200;
 $r-xxl: 1340;
-
-// @include line-clamp(3);
 
 $c-default: #000;
 $c-blue: #018fa3;
