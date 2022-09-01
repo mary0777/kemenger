@@ -74,24 +74,30 @@ $(function () {
 
 
 
+$('.catalog__inner, .reviews__inner').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  cssEase: 'linear',
+  prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
+  nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
+  responsive: [
+    {
+      breakpoint: 1201,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ],
 
-
-  $('.catalog__inner, .reviews__inner').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 4000,
-    cssEase: 'linear',
-    prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
-    nextArrow: '<button type="button" class="slick-btn slick-next"></button>'
-  });
-
-
-
-
-
-
-
+});
 
 
 });
@@ -118,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   burger.addEventListener('click', () => {
     mobileMenu.classList.toggle('menu__list--active'); 
-    if (mobileMenu.classList.contains('menu__list--active'))  { 
+    if (mobileMenu.classList.contains('menu__list--active')) { 
       burger.classList.add('burger--active'); 
       bodyLock.classList.add('lock');
     }
@@ -128,4 +134,20 @@ document.addEventListener('DOMContentLoaded', () => {
       bodyLock.classList.remove('lock');
     }
   });
+
+  $('.menu__link').click(function () {
+    burger.classList.remove('burger--active');
+    $('.menu__list').removeClass('menu__list--active');
+    $('body').removeClass('lock');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target !== burger && e.target !== mobileMenu) {
+      burger.classList.remove('burger--active');
+      mobileMenu.classList.remove('menu__list--active');
+      bodyLock.classList.remove('lock');
+    }
+  });
 });
+
+

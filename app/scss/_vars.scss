@@ -20,10 +20,10 @@
 }
 
 @mixin burger {
-	width: $burgerWidth; //указываем ширину линий
-	height: $burgerHeight; //указываем высоту линий
+	width: $burgerWidth; 
+	height: $burgerHeight; 
 	position: relative;
-	color: $burgerColor; //указываем цвет линий
+	color: $burgerColor; 
 }
 
 @mixin r($width) {
@@ -41,7 +41,7 @@ $r-sm: 576;
 $r-md: 768;
 $r-lg: 992;
 $r-xl: 1200;
-$r-xxl: 1330;
+$r-xxl: 1340;
 
 // @include line-clamp(3);
 
