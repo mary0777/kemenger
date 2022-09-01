@@ -1,40 +1,86 @@
-// body{
-//   font-family: 'Open Sans', 'Roboto', sans-serif;
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 14px;
-//   line-height: 1.4;
-//   letter-spacing: 0.03em;
-//   background-color: #fff;
-//   color: $c-default;
-// }
+body {
+  font-family: 'Commissioner', 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  background-color: #fff;
+  color: $c-default;
+}
 
-// .wrapper {
-//   overflow-x: hidden;
-//   min-height: 100%;
-//   display: flex;
-//   flex-direction: column;
-// }
+.wrapper {
+  overflow-x: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-// .main {
-//   flex: 1 1 auto; 
-// }
+.main {
+  flex: 1 1 auto;
+  padding-top: 98px;
+}
 
-// .sr-only {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   border: 0;
-//   padding: 0;
-//   white-space: nowrap;
-//   clip-path: inset(100%);
-//   clip: rect(0 0 0 0);
-//   overflow: hidden;
-// }
+.lock {
+  overflow: hidden;
+  position: relative;
+  display: inline;
 
-// .container{
-//   max-width: 1230px;
-//   padding: 0 15px;
-//   margin: 0 auto;
-// }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.5);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 19px 45px 21px;
+  background-color: $c-yellow;
+  box-shadow: 0 20px 40px -27px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  outline: transparent;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $c-orange;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px #ff6838;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 48px;
+  text-align: center;
+
+  @include r($r-sm){
+    font-size: 40px;
+  }
+}

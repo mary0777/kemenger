@@ -32,7 +32,6 @@ $(function () {
     $('.catalog__info').toggleClass('catalog__info--active');
   });
 
-
 $('.catalog__inner, .reviews__inner').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -56,7 +55,6 @@ $('.catalog__inner, .reviews__inner').slick({
     }
   ],
 });
-});
 
 
 
@@ -68,7 +66,6 @@ $(window).scroll(function () {
     $('.header').removeClass('fixed');
   }
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
 
