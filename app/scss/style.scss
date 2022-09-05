@@ -886,7 +886,7 @@
 
     @include r($r-sm) {
       padding: 20px 7px;
-      height: 575px;
+      min-height: 575px;
     }
   }
 
@@ -920,7 +920,11 @@
 
   &__list {
     &--active {
-      height: 600px;
+      height: 645px;
+
+      @include r($r-sm) {
+        height: 520px;
+      }
     }
 
     @include r($r-sm) {
