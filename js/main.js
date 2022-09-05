@@ -1,22 +1,5 @@
 $(function () {
 
-  $('.popup').magnificPopup({
-    type: 'inline',
-    preloader: false,
-    focus: '#name',
-
-    callbacks: {
-      beforeOpen: function () {
-        if ($(window).width() < 700) {
-          this.st.focus = false;
-        } else {
-          this.st.focus = '#name';
-        }
-      },
-    }
-  });
-
-
   $('.menu__link, .about__link').on('click', function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
@@ -26,18 +9,11 @@ $(function () {
     }, 1500);
   });
 
-
-  $('.catalog__btn').on('click', function () {
-    $('.catalog__descr:nth-child(n+5)').slideToggle();
-    $('.catalog__info').toggleClass('catalog__info--active');
-  });
-
   $('.catalog__inner, .reviews__inner').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
     cssEase: 'linear',
+    infinite: false,
     prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
     responsive: [
@@ -57,7 +33,6 @@ $(function () {
   });
 });
 
-
 $(window).scroll(function () {
   var scroll = $(window).scrollTop();
   if (scroll >= 700) {
@@ -68,7 +43,6 @@ $(window).scroll(function () {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-
   const burger = document.querySelector('.burger'); 
   const mobileMenu = document.querySelector('.menu__list'); 
   const bodyLock = document.querySelector('body');
@@ -101,4 +75,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+$(function () {
+$('.popup').magnificPopup({
+  type: 'inline',
+  preloader: false,
+  focus: '#name',
+
+  callbacks: {
+    beforeOpen: function () {
+      if ($(window).width() < 700) {
+        this.st.focus = false;
+      } else {
+        this.st.focus = '#name';
+      }
+    },
+  }
+});
+});
+
+jQuery(function () {
+    
+  jQuery(".catalog__list").each(function () {
+    var theList = jQuery(this);
+    var kids = theList.children(".catalog__descr");
+    kids.filter(":gt(3)").hide();
+    if (kids.length > 4) {
+      theList.append('<a class="catalog__btn" href="#"> Подробнее...</a>');
+    }
+  });
+
+  $(".catalog__list").on('click', '.catalog__btn', function (event) {
+    event.preventDefault();
+    $(this).prevAll().show().end().remove();
+    $('.catalog__list').addClass('catalog__list--active')
+});
+});
 

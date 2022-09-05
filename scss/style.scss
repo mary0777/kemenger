@@ -880,21 +880,13 @@
 
   &__info {
     padding: 60px 7px;
-    height: 700px;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
 
     @include r($r-sm) {
       padding: 20px 7px;
       height: 575px;
-    }
-
-    &--active {
-      height: 1010px;
-
-      .catalog__btn {
-        display: none;
-      }
     }
   }
 
@@ -927,6 +919,10 @@
   }
 
   &__list {
+    &--active {
+      height: 600px;
+    }
+
     @include r($r-sm) {
       font-size: 16px;
     }
@@ -935,11 +931,6 @@
   &__descr {
     padding: 12px;
     border-bottom: 1px dashed #f0f0f0;
-
-
-    &:nth-child(n+5) {
-      display: none;
-    }
 
     &:last-child {
       margin-bottom: 12px;
@@ -1018,11 +1009,11 @@
       top: 50%;
       transform: translateY(-50%);
       transition: background color 0.4s linear;
-
+      
       @include r($r-xxl) {
         top: -25px;
       }
-
+      
       @include r($r-md) {
         width: 15px;
         height: 30px;
@@ -1034,7 +1025,7 @@
         background-color: $c-orange;
       }
     }
-
+    
     &:active {
       &::before {
         background-color: $c-yellow;
@@ -1046,7 +1037,7 @@
     &::before {
       left: -58px;
       mask-image: url(../images/sprite.svg#arrow-left);
-
+      
       @include r($r-xxl) {
         left: auto;
         right: 100px;
